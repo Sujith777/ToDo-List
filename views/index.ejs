@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <main>
+        <%- include('partials/header.ejs') %>
+        <% if(locals.today) { %>
+            <div class="heading">
+                <p><%= today %></p>
+            </div>
+            <% } %>
+        <div class="box" id="daily-list">
+            <% if(locals.dailyList) { %>
+                <% for(let i=0; i<dailyList.length; i++) { %>
+                    <div class="item">
+                        <input type="checkbox" class="done">
+                        <p><%= dailyList[i] %></p>
+                    </div>
+                <% }} %>
+            <form class="item" action="/" method="POST">
+                <input type="text" name="newTask" placeholder="New Task">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <%- include("partials/footer.ejs") %>
+    </main>
+</body>
+
+</html>
