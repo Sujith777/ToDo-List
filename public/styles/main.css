@@ -1,0 +1,112 @@
+body {
+  margin: 20px 40px;
+}
+
+main {
+  margin-top: 10px;
+  background-color: deeppink;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding: 10px 10px;
+  gap: 20px;
+  font-size: 2rem;
+  background-color: aqua;
+}
+
+p {
+  margin-left: 5px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
+  margin: 50px auto;
+  width: 40%;
+  border: 2px solid gray;
+  border-radius: 10px;
+  color: #fefefe;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+a:hover {
+  color: #fefefe;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  gap: 5px;
+  width: 40%;
+}
+
+.item {
+  display: flex;
+  background-color: azure;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+  border: 2px solid gray;
+  min-height: 70px;
+  overflow: hidden;
+}
+
+.item:last-child {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  background-color: lightgreen;
+  margin-left: 5px;
+}
+
+button:hover {
+  border: 4px solid chartreuse;
+}
+
+input[type="text"] {
+  border: none;
+  text-align: center;
+  height: 60px;
+  background: transparent;
+  background-color: inherit;
+  margin-right: 5px;
+}
+
+input[type="text"]:focus {
+  border-bottom: 3px solid purple;
+  outline: none;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: crimson;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 10px auto;
+  background-color: grey;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
